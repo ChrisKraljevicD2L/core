@@ -8,17 +8,65 @@
 		<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 		<script type="module">
 			import '../../demo/demo-page.js';
+			import '../../typography/typography.js';
 			import '../list.js';
+			import '../list-item.js';
+			import '../list-item-content.js';
 		</script>
 	</head>
 	<body unresolved>
 
 		<d2l-demo-page title="List Components">
 
-			<h2>List</h2>
+				<h2>Inner Illustration List</h2>
+
+				<d2l-demo-snippet>
+					<d2l-list class="d2l-list-divider-extended">
+						<d2l-list-item>
+							<div slot="illustration" style="height: 200px; width: 100%"></div>
+							<div class="d2l-list-item-text d2l-body-compact"> Test 1 </div>
+        					<div class="d2l-list-item-text-secondary d2l-body-small">Secondary list text which could be a component.</div>
+							<div slot="actions">Action</div>
+						</d2l-list-item>
+						<d2l-list-item>
+							<div slot="illustration" style="height: 200px; width: 100%"></div>
+							test 2
+						</d2l-list-item>
+						<d2l-list-item>
+							<div slot="illustration" style="height: 200px; width: 100%"></div>
+							test 3
+						</d2l-list-item>
+						<d2l-list-item>
+							<div slot="illustration" style="height: 200px; width: 100%"></div>
+							test 4
+						</d2l-list-item>
+						<div>test</div>
+					</d2l-list>
+				</d2l-demo-snippet>
+
+			<h2>Outer Illustration List</h2>
 
 			<d2l-demo-snippet>
-				<d2l-list></d2l-list>
+				<d2l-list class="d2l-list-divider-all">
+					<d2l-list-item>
+						<div slot="illustration-outer" style="height: 200px; width: 100%"></div>
+						test 1
+						<div slot="actions">Action</div>
+					</d2l-list-item>
+					<d2l-list-item>
+						<div slot="illustration-outer" style="height: 200px; width: 100%"></div>
+						test 2
+					</d2l-list-item>
+					<d2l-list-item>
+						<div slot="illustration-outer" style="height: 200px; width: 100%"></div>
+						test 3
+					</d2l-list-item>
+					<d2l-list-item>
+						<div slot="illustration-outer" style="height: 200px; width: 100%"></div>
+						test 4
+					</d2l-list-item>
+					<div>test</div>
+				</d2l-list>
 			</d2l-demo-snippet>
 
 		</d2l-demo-page>
